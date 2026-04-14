@@ -17,6 +17,13 @@ RUN apt-get update && apt-get install -y \
     python3-psycopg2 \
     && rm -rf /var/lib/apt/lists/*
 
+# Install Java (OpenJDK)
+RUN sudo apt-get install -y openjdk-21-jdk
+
+# Install Nacos (使用官方 Docker 镜像)
+RUN curl -s "https://github.com/nacos-group/nacos-docker/releases/download/release-2.0.3/nacos-server-2.0.3.tar.gz" | tar -zxvf -
+WORKDIR /home/nacos/nacos/bin
+RUN ./startup.sh -m standalone
 
 # 配置 PostgreSQL
 RUN service postgresql start &&\
