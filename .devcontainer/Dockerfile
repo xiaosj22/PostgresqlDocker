@@ -6,7 +6,7 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 RUN sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 
 RUN export DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get -y install --no-install-recommends openjdk-21-jdk maven postgresql-client rabbitmq-server
+RUN apt-get update && apt-get -y install --no-install-recommends openjdk-21-jdk maven postgresql-client rabbitmq-server \
     && apt-get clean  \
 #    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 #    && mkdir -p /workspace && chown vscode /workspace
