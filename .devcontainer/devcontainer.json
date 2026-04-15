@@ -1,0 +1,28 @@
+{
+  "name": ".Microservices Development",
+  "version": "1.0.0",
+  "description": "",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "ms-python.python",
+    "redhat.java",
+    "ms-vscode.makefile-tools"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  // PostgreSQL, Nacos, RabbitMQ ports
+  "forwardPorts": [5432, 8848, 5672],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaosj22/PostgresqlDocker.git"
+  },
+  "private": true
+}
