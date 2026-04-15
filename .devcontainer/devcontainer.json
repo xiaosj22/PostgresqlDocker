@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "service": "app",
-  "workspaceFolder": "/workspace9",
   "dockerComposeFile": "docker-compose.yml",
-  "postCreateCommand": "pip3 install --user -r requirements.txt",
   "extensions": [
     "ms-azuretools.vscode-docker",
     "ms-python.python",
