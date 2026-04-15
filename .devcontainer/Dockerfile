@@ -4,6 +4,7 @@ FROM ubuntu:latest
 # 更换源为阿里云源
 RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 RUN sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+Run sed -i 's|https://download.docker.com|https://mirrors.aliyun.com/docker-ce|g' /etc/apt/sources.list.d/docker.list
 
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update  && apt-get clean \
