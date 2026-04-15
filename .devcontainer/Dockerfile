@@ -8,8 +8,9 @@ RUN sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -y install --no-install-recommends openjdk-21-jdk maven postgresql-client rabbitmq-server \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && mkdir -p /workspace && chown vscode /workspace \
-    && usermod -aG docker vscode \ # Allow vscode user to run docker commands without sudo (optional)
+    && mkdir -p /workspace && chown vscode /workspace
+#    && usermod -aG docker vscode
+    # Allow vscode user to run docker commands without sudo (optional)
 
 
 # 安装必要的包
