@@ -5,24 +5,24 @@ services:
 #    volumes:
 #      - /workspaces/PostgresqlDocker:/workspace:cached
     command: /bin/sh -c "while sleep 1000; do :; done" # Keep the container running
-#  postgres:
-#    image: postgres:latest
-#    restart: unless-stopped
-#    environment:
-#      POSTGRES_PASSWORD: sub
-#      POSTGRES_DB: mydatabase
-#    ports:
-#      - "5432:5432"
-#  nacos:
-#    image: nacos/nacos-server:3.2.1
-#    environment:
-#      MODE: standalone
-#      PREFER_HOST_MODE: hostname
-#      SPRING_DATASOURCE_PLATFORM: postgresql
-#    ports:
-#      - "8848:8848"
-#  rabbitmq:
-#    image: rabbitmq:3-management
-#    ports:
-#      - "5672:5672" # AMQP protocol port
-#      - "15672:15672" # HTTP management UI port
+  postgres:
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: sub
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+  nacos:
+    image: nacos/nacos-server:3.2.1
+    environment:
+      MODE: standalone
+      PREFER_HOST_MODE: hostname
+      SPRING_DATASOURCE_PLATFORM: postgresql
+    ports:
+      - "8848:8848"
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672" # AMQP protocol port
+      - "15672:15672" # HTTP management UI port
