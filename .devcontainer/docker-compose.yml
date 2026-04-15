@@ -3,7 +3,7 @@ services:
   app:
     image: mcr.microsoft.com/devcontainers/base:ubuntu
     volumes:
-      - ..:/workspace:cached
+      - /home/user/PostgresqlDocker:/workspace:cached
     command: /bin/sh -c "while sleep 1000; do :; done" # Keep the container running
   postgres:
     image: postgres:latest
