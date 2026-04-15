@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "service": "app",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
-  },
 //  此处不需要在设置workspaceFolder，githubcodespace会自动帮你设置workspaceFolder
-//  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/PostgresqlDocker",
   "dockerComposeFile": "docker-compose.yml",
   "extensions": [
     "ms-azuretools.vscode-docker",
