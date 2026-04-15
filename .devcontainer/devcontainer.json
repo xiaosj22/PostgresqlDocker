@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "service": "app",
+//  此处不需要在设置workspaceFolder，githubcodespace会自动帮你设置workspaceFolder
+//  "workspaceFolder": "/workspace",
   "dockerComposeFile": "docker-compose.yml",
   "extensions": [
     "ms-azuretools.vscode-docker",
