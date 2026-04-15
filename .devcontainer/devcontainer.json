@@ -5,6 +5,9 @@
   "service": "app",
   "workspaceFolder": "/workspace",
   "dockerComposeFile": "docker-compose.yml",
+  "mounts": [
+    "source=myvolume,target=/workspace,type=volume"
+  ],
   "extensions": [
     "ms-azuretools.vscode-docker",
     "ms-python.python",
