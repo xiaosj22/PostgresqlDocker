@@ -2,9 +2,9 @@
   "name": ".Microservices Development",
   "version": "1.0.0",
   "description": "",
-  "dockerComposeFile": "docker-compose.yml",
   "service": "app",
   "workspaceFolder": "/workspace",
+  "dockerComposeFile": "docker-compose.yml",
   "extensions": [
     "ms-azuretools.vscode-docker",
     "ms-python.python",
