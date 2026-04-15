@@ -5,9 +5,7 @@
   "service": "app",
   "workspaceFolder": "/workspace",
   "dockerComposeFile": "docker-compose.yml",
-  "mounts": [
-    "source=myvolume,target=/workspace,type=volume"
-  ],
+  "postCreateCommand": "pip3 install --user -r requirements.txt",
   "extensions": [
     "ms-azuretools.vscode-docker",
     "ms-python.python",
