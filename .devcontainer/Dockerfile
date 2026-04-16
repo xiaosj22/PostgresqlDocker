@@ -1,5 +1,7 @@
 FROM postgres:latest
-#
+
+# 设置数据卷
+VOLUME /var/lib/postgresql/data
 #若安装成功可查询：psql --version
 #判断服务是否启动：ps aux | grep postgres
 #查看token:echo $GITHUB_TOKEN
@@ -7,14 +9,14 @@ FROM postgres:latest
 #curl -H "X-Github-Token: ghu_cLJl4aIdmI3MeT9bMTyskWnZJcSZq10cALYV" http://127.0.0.1:5432
 #sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-
+#/var/lib/postgresql/data/postgresql.conf
 # 设置环境变量，用于初始化数据库时设置用户名和密码
 ENV POSTGRES_USER=dbbase
 ENV POSTGRES_PASSWORD=sub
 ENV POSTGRES_DB=dbbms
 
 RUN export DEBIAN_FRONTEND=noninteractive
-RUN apt update  && apt clean \
+RUN apt-get update  && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #    && apt -y install --no-install-recommends docker-compose-plugin
 #    && apt -y install --no-install-recommends openjdk-21-jdk
