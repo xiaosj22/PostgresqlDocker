@@ -2,6 +2,10 @@ FROM postgres:latest
 
 # 设置数据卷
 VOLUME /var/lib/postgresql/data
+
+#COPY /workspaces/PostgresqlDocker/config/postpresql.conf  /var/lib/postgresql/data
+#ENV POSTGRES_INITDB_ARGS="--data-checksums"
+
 #若安装成功可查询：psql --version
 #判断服务是否启动：ps aux | grep postgres
 #查看token:echo $GITHUB_TOKEN
@@ -61,3 +65,9 @@ RUN apt-get update  && apt-get clean \
 #
 ## 设置环境变量以使用 PostgreSQL
 #ENV DATABASE_URL=postgresql://docker:docker@localhost/basedb
+
+# 暴露 PostgreSQL 默认端口
+EXPOSE 5432
+
+# 设置默认的容器启动命令
+CMD ["postgres"]
