@@ -5,6 +5,8 @@ FROM ubuntu:latest
 #查看token:echo $GITHUB_TOKEN
 #访问本地端口
 #curl -H "X-Github-Token: ghu_cLJl4aIdmI3MeT9bMTyskWnZJcSZq10cALYV" http://127.0.0.1:5432
+#sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
 
 # 设置环境变量，用于初始化数据库时设置用户名和密码
 ENV POSTGRES_USER=dbbase
@@ -14,7 +16,6 @@ ENV POSTGRES_DB=dbbms
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt-get update  && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-Run apt -y install --no-install-recommends wget
 #    && apt -y install --no-install-recommends docker-compose-plugin
 #    && apt -y install --no-install-recommends openjdk-21-jdk
 #    maven postgresql-client rabbitmq-server
