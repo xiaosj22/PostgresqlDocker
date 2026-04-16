@@ -12,19 +12,19 @@ ENV POSTGRES_PASSWORD=sub
 ENV POSTGRES_DB=dbbms
 
 RUN export DEBIAN_FRONTEND=noninteractive
-RUN apt-get update  && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-#    && apt-get -y install --no-install-recommends wget curl
-#    && apt-get -y install --no-install-recommends docker-compose-plugin
-#    && apt-get -y install --no-install-recommends openjdk-21-jdk
+RUN apt update  && apt clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && apt -y install --no-install-recommends wget curl
+#    && apt -y install --no-install-recommends docker-compose-plugin
+#    && apt -y install --no-install-recommends openjdk-21-jdk
 #    maven postgresql-client rabbitmq-server
 #    && mkdir -p /workspace && chown vscode /workspace
 #    && usermod -aG docker vscode
     # Allow vscode user to run docker commands without sudo (optional)
 
-#RUN apt-get install docker-compose-plugin
+#RUN apt install docker-compose-plugin
 # 安装必要的包
-#RUN apt-get update && apt-get install -y \
+#RUN apt update && apt install -y \
 #    curl \
 #    wget \
 #    software-properties-common \
@@ -43,7 +43,7 @@ RUN apt-get update  && apt-get clean \
 
 #
 ## Install Java (OpenJDK)
-#RUN sudo apt-get -y install --no-install-recommends openjdk-21-jdk
+#RUN sudo apt -y install --no-install-recommends openjdk-21-jdk
 #
 ## Install Nacos (使用官方 Docker 镜像)
 #RUN curl -O https://github.com/alibaba/nacos/releases/download/3.2.0/nacos-server-3.2.0.zip | tar -zxvf -
