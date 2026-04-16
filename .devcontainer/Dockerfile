@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM postgres:latest
 #
 #若安装成功可查询：psql --version
 #判断服务是否启动：ps aux | grep postgres
