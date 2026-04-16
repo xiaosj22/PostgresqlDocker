@@ -13,8 +13,7 @@ ENV POSTGRES_DB=dbbms
 
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update  && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && apt-get -y install curl
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #    && apt-get -y install --no-install-recommends wget curl
 #    && apt-get -y install --no-install-recommends docker-compose-plugin
 #    && apt-get -y install --no-install-recommends openjdk-21-jdk
