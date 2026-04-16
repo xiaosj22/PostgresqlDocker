@@ -1,4 +1,4 @@
-FROM postgres:latest
+FROM ubuntu:latest
 #
 #若安装成功可查询：psql --version
 #判断服务是否启动：ps aux | grep postgres
@@ -14,7 +14,13 @@ ENV POSTGRES_DB=dbbms
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt update  && apt clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && apt -y install --no-install-recommends wget curl
+    && apt -y install --no-install-recommends \
+    wget \
+    curl \
+    systemctl \
+    sudo \
+    postgresql \
+    postgresql-contrib
 #    && apt -y install --no-install-recommends docker-compose-plugin
 #    && apt -y install --no-install-recommends openjdk-21-jdk
 #    maven postgresql-client rabbitmq-server
