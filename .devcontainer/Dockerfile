@@ -1,9 +1,12 @@
 FROM postgres:latest
-# 更换源为阿里云源
-#RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
-#RUN sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
-#Run sed -i 's|https://download.docker.com|https://mirrors.aliyun.com/docker-ce|g' /etc/apt/sources.list
+#
+#若安装成功可查询：psql --version
+#判断服务是否启动：ps aux | grep postgres
 
+# 设置环境变量，用于初始化数据库时设置用户名和密码
+ENV POSTGRES_USER=dbbase
+ENV POSTGRES_PASSWORD=sub
+ENV POSTGRES_DB=dbbms
 
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update  && apt-get clean \
