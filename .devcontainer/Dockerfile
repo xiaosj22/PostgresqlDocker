@@ -12,15 +12,12 @@ ENV POSTGRES_PASSWORD=sub
 ENV POSTGRES_DB=dbbms
 
 RUN export DEBIAN_FRONTEND=noninteractive
-RUN apt update  && apt clean \
+RUN apt-get update  && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && apt -y install --no-install-recommends \
-    wget \
+    && apt -y install --no-install-recommends wget \
     curl \
     systemctl \
-    sudo \
-    postgresql \
-    postgresql-contrib
+    sudo
 #    && apt -y install --no-install-recommends docker-compose-plugin
 #    && apt -y install --no-install-recommends openjdk-21-jdk
 #    maven postgresql-client rabbitmq-server
