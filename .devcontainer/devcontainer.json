@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "service": "postgres",
+  "workspaceFolder": "/workspaces/PostgresqlDocker",
 //  "dockerFile": "Dockerfile",
   "dockerComposeFile": "docker-compose.yml",
   "extensions": [
