@@ -6,9 +6,9 @@
   "workspaceFolder": "/workspaces/PostgresqlDocker",
 //  "dockerFile": "Dockerfile",
   "dockerComposeFile": "docker-compose.yml",
-  "features": {
+/*  "features": {
     "ghcr.io/devcontainers/features/common-utils:1": {}
-  },
+  },*/
   "extensions": [
     "ms-azuretools.vscode-docker",
     "ms-python.python",
