@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "service": "app",
-  "dockerFile": "Dockerfile",
+//  "dockerFile": "Dockerfile",
+  "dockerComposeFile": "docker-compose.yml",
   "extensions": [
     "ms-azuretools.vscode-docker",
     "ms-python.python",
