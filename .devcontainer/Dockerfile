@@ -19,9 +19,20 @@ ENV POSTGRES_USER=dbbase
 ENV POSTGRES_PASSWORD=sub
 ENV POSTGRES_DB=dbbms
 
+#安装docker-compose
+#curl -L "https://github.com/docker/compose/releases/download/v2.10.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+# run 执行貌似都不生效，后续都是进入控制台手动输入apt-get update 和 apt update才行
+#apt-get install curl
 RUN export DEBIAN_FRONTEND=noninteractive
-RUN apt-get update  && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    apt-get update -y
+
+
+RUN  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #    && apt -y install --no-install-recommends docker-compose-plugin
 #    && apt -y install --no-install-recommends openjdk-21-jdk
 #    maven postgresql-client rabbitmq-server
