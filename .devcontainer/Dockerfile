@@ -8,6 +8,9 @@ VOLUME /var/lib/postgresql/data
 
 #若安装成功可查询：psql --version
 #判断服务是否启动：ps aux | grep postgres
+#测试数据库连接: psql -U postgres -h localhost -d postgres   进入交互终端，显示 postgres=#
+#postgresql://postgres:sub@fantastic-fiesta-69pp4g59qjrph59v.github.dev:5432/postgres
+#postgresql://postgres:sub@fantastic-fiesta-69pp4g59qjrph59v.github.dev/mydatabase
 #查看token:echo $GITHUB_TOKEN
 #访问本地端口
 #curl -H "X-Github-Token: ghu_cLJl4aIdmI3MeT9bMTyskWnZJcSZq10cALYV" http://127.0.0.1:5432

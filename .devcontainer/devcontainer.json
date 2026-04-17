@@ -25,5 +25,5 @@
     "type": "git",
     "url": "https://github.com/xiaosj22/PostgresqlDocker.git"
   },
-  "private": true
+  "private": false
 }
