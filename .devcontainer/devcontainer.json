@@ -6,12 +6,12 @@
   "workspaceFolder": "/workspaces/PostgresqlDocker",
 //  "dockerFile": "Dockerfile",
   "dockerComposeFile": "docker-compose.yml",
-  "extensions": [
+/*  "extensions": [
     "ms-azuretools.vscode-docker",
     "ms-python.python",
     "redhat.java",
     "ms-vscode.makefile-tools"
-  ],
+  ],*/
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
