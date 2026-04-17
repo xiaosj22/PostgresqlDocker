@@ -1,10 +1,11 @@
+version: "3.8"
 services:
-#  app:
-#    image: mcr.microsoft.com/devcontainers/base:ubuntu
-##    volumes:
-##      - /workspaces/PostgresqlDocker:/workspace:cached
-#    command: /bin/sh -c "while sleep 1000; do :; done" # Keep the container running
-#
+  #  app:
+  #    image: mcr.microsoft.com/devcontainers/base:ubuntu
+  ##    volumes:
+  ##      - /workspaces/PostgresqlDocker:/workspace:cached
+  #    command: /bin/sh -c "while sleep 1000; do :; done" # Keep the container running
+  #
   postgres:
     image: postgres:latest
     restart: always
