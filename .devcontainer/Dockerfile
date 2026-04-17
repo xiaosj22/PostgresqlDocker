@@ -29,7 +29,7 @@ RUN export DEBIAN_FRONTEND=noninteractive
 
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,sharing=locked \
-    apt-get update && apt-get upgrade -y
+    apt-get update -y && apt-get upgrade -y
 RUN  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #    && apt -y install --no-install-recommends docker-compose-plugin
@@ -39,7 +39,7 @@ RUN  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #    && usermod -aG docker vscode
     # Allow vscode user to run docker commands without sudo (optional)
 
-RUN apt-get install docker-compose-plugin
+RUN apt-get install -y docker-compose-plugin
 # 安装必要的包
 #RUN apt update && apt install -y \
 #    curl \
