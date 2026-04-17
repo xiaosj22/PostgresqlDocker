@@ -6,7 +6,7 @@ services:
   #    command: /bin/sh -c "while sleep 1000; do :; done" # Keep the container running
   #
   postgres:
-    image: postgres:latest
+    image: postgres:13-alpine
     restart: always
     environment:
       POSTGRES_PASSWORD: sub
