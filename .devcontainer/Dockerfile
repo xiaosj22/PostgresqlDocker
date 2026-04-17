@@ -39,7 +39,7 @@ RUN  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #    && usermod -aG docker vscode
     # Allow vscode user to run docker commands without sudo (optional)
 
-RUN apt-get install -y docker-compose-plugin
+#RUN apt-get install -y docker-compose
 # 安装必要的包
 #RUN apt update && apt install -y \
 #    curl \
