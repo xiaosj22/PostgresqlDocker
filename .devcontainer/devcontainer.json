@@ -15,12 +15,12 @@
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
-  "portsAttributes": {
+/*  "portsAttributes": {
     "5432": {
       "label": "PostgreSQL",
       "private": false  // 设为 false 强制公开
     }
-  },
+  },*/
   // PostgreSQL, Nacos, RabbitMQ ports
   "forwardPorts": [5432],
   "main": "index.js",
