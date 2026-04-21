@@ -21,8 +21,7 @@
   },
   "portsAttributes": {
     "5432": {
-      "label": "PostgreSQL",
-      "private": false
+      "visibility": "public"
     }
   },
   // PostgreSQL, Nacos, RabbitMQ ports

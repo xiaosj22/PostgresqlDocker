@@ -13,6 +13,8 @@ VOLUME /var/lib/postgresql/data
 #postgresql://postgres:sub@fantastic-fiesta-69pp4g59qjrph59v.github.dev/mydatabase
 #查看token:echo $GITHUB_TOKEN
 #访问本地端口
+#在你的机器本地不要用telnet git.dev 5432 不可行
+#本地安装github-cli 然后执行端口转发， gh codespace ports forward 5432:5432 ，不要关闭终端
 #curl -H "X-Github-Token: ghu_cLJl4aIdmI3MeT9bMTyskWnZJcSZq10cALYV" http://127.0.0.1:5432
 #sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 

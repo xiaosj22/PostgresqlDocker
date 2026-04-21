@@ -14,6 +14,7 @@ services:
       POSTGRES_DB: mydatabase
 #      这里必须挂载数据卷，否则每次重启容器都会丢失数据
     volumes:
+      - ./init-scripts:/docker-entrypoint-initdb.d
       - db-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
