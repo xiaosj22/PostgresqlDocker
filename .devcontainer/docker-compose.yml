@@ -15,7 +15,7 @@ services:
 #      这里必须挂载数据卷，否则每次重启容器都会丢失数据
     volumes:
       - ./init-scripts:/docker-entrypoint-initdb.d
-      - db-data:/var/lib/postgresql/data
+      - ./database:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     deploy:
@@ -36,6 +36,9 @@ services:
 #    ports:
 #      - "5672:5672" # AMQP protocol port
 #      - "15672:15672" # HTTP management UI port
-volumes:
-  db-data:
-    driver: local # 使用本地卷
+
+
+#
+#volumes:
+#  db-data:
+#    driver: local # 使用本地卷
