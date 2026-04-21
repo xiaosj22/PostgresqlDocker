@@ -12,6 +12,9 @@ services:
     environment:
       POSTGRES_PASSWORD: sub
       POSTGRES_DB: mydatabase
+      # 这两行是解决报错的关键
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_INITDB_ARGS: "--auth-host=trust"
 #      这里必须挂载数据卷，否则每次重启容器都会丢失数据
     volumes:
       - ./init-scripts:/docker-entrypoint-initdb.d
