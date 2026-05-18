@@ -20,9 +20,9 @@ VOLUME /var/lib/postgresql/data
 
 #/var/lib/postgresql/data/postgresql.conf
 # 设置环境变量，用于初始化数据库时设置用户名和密码
-ENV POSTGRES_USER=dbbase
-ENV POSTGRES_PASSWORD=sub
-ENV POSTGRES_DB=dbbms
+#ENV POSTGRES_USER=dbbase
+#ENV POSTGRES_PASSWORD=sub
+#ENV POSTGRES_DB=dbbms
 
 #安装docker-compose
 #curl -L "https://github.com/docker/compose/releases/download/v2.10.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
