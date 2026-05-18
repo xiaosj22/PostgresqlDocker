@@ -6,6 +6,9 @@
   "workspaceFolder": "/workspaces/PostgresqlDocker",
 //  "dockerFile": "Dockerfile",
   "dockerComposeFile": "docker-compose.yml",
+  "containerEnv": {
+    "POSTGRES_PASSWORD": "123456"
+  },
 /*  "features": {
     "ghcr.io/devcontainers/features/common-utils:1": {}
   },*/
