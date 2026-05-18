@@ -19,12 +19,12 @@ services:
     volumes:
       - ./init-scripts:/docker-entrypoint-initdb.d
       - ./database:/var/lib/postgresql/data
-    command: >
-      sh -c "
-            sed -i 's/^host.*all.*all.*127.0.0.1.*trust/host all all 0.0.0.0\/0 md5/' /var/lib/postgresql/data/pg_hba.conf 2>/dev/null || true;
-            echo 'host all all 0.0.0.0/0 md5' >> /var/lib/postgresql/data/pg_hba.conf;
-            docker-entrypoint.sh postgres
-            "
+#    command: >
+#      sh -c "
+#            sed -i 's/^host.*all.*all.*127.0.0.1.*trust/host all all 0.0.0.0\/0 md5/' /var/lib/postgresql/data/pg_hba.conf 2>/dev/null || true;
+#            echo 'host all all 0.0.0.0/0 md5' >> /var/lib/postgresql/data/pg_hba.conf;
+#            docker-entrypoint.sh postgres
+#            "
     ports:
       - "5432:5432"
     deploy:
